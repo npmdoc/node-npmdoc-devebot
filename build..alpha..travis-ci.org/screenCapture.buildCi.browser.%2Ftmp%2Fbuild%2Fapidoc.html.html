@@ -1,0 +1,1278 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/devebot/devebot#readme">devebot (v0.1.23)</a>
+</h1>
+<h4>Microservice Framework</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.devebot">module devebot</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.devebot">
+            function <span class="apidocSignatureSpan"></span>devebot
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.bridge_loader">
+            function <span class="apidocSignatureSpan">devebot.</span>bridge_loader
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.config_loader">
+            function <span class="apidocSignatureSpan">devebot.</span>config_loader
+            <span class="apidocSignatureSpan">(appName, appRootDir, libRootDirs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.launchApplication">
+            function <span class="apidocSignatureSpan">devebot.</span>launchApplication
+            <span class="apidocSignatureSpan">(context, pluginNames, bridgeNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.registerLayerware">
+            function <span class="apidocSignatureSpan">devebot.</span>registerLayerware
+            <span class="apidocSignatureSpan">(layerRootPath, pluginNames, bridgeNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.require">
+            function <span class="apidocSignatureSpan">devebot.</span>require
+            <span class="apidocSignatureSpan">(packageName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager">
+            function <span class="apidocSignatureSpan">devebot.</span>runhook_manager
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">devebot.</span>chores</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">devebot.</span>runhook_manager.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.devebot.bridge_loader">module devebot.bridge_loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.bridge_loader.bridge_loader">
+            function <span class="apidocSignatureSpan">devebot.</span>bridge_loader
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.bridge_loader.super_">
+            function <span class="apidocSignatureSpan">devebot.bridge_loader.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">devebot.bridge_loader.</span>argumentSchema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.devebot.chores">module devebot.chores</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.chores.filterFiles">
+            function <span class="apidocSignatureSpan">devebot.chores.</span>filterFiles
+            <span class="apidocSignatureSpan">(dir, filter, filenames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.chores.listFiles">
+            function <span class="apidocSignatureSpan">devebot.chores.</span>listFiles
+            <span class="apidocSignatureSpan">(dir, filenames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.chores.loadServiceByNames">
+            function <span class="apidocSignatureSpan">devebot.chores.</span>loadServiceByNames
+            <span class="apidocSignatureSpan">(serviceMap, serviceFolder, serviceNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.chores.pickProperty">
+            function <span class="apidocSignatureSpan">devebot.chores.</span>pickProperty
+            <span class="apidocSignatureSpan">(propName, containers, propDefault)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.chores.stringKebabCase">
+            function <span class="apidocSignatureSpan">devebot.chores.</span>stringKebabCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.chores.stringLabelCase">
+            function <span class="apidocSignatureSpan">devebot.chores.</span>stringLabelCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.devebot.config_loader">module devebot.config_loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.config_loader.config_loader">
+            function <span class="apidocSignatureSpan">devebot.</span>config_loader
+            <span class="apidocSignatureSpan">(appName, appRootDir, libRootDirs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.config_loader.loadConfig">
+            function <span class="apidocSignatureSpan">devebot.config_loader.</span>loadConfig
+            <span class="apidocSignatureSpan">(appRootDir, libRootDirs)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.devebot.runhook_manager">module devebot.runhook_manager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager.runhook_manager">
+            function <span class="apidocSignatureSpan">devebot.</span>runhook_manager
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">devebot.runhook_manager.</span>argumentSchema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.devebot.runhook_manager.prototype">module devebot.runhook_manager.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager.prototype.callRunhook">
+            function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>callRunhook
+            <span class="apidocSignatureSpan">(routine, entity, operation, document)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager.prototype.getRunhookEntities">
+            function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getRunhookEntities
+            <span class="apidocSignatureSpan">(routine)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager.prototype.getRunhookOperations">
+            function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getRunhookOperations
+            <span class="apidocSignatureSpan">(routine, entity)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager.prototype.getServiceHelp">
+            function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getServiceHelp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager.prototype.getServiceInfo">
+            function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getServiceInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.devebot.runhook_manager.prototype.isRunhookAvailable">
+            function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>isRunhookAvailable
+            <span class="apidocSignatureSpan">(routine, entity, operation)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.devebot" id="apidoc.module.devebot">module devebot</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.devebot" id="apidoc.element.devebot.devebot">
+        function <span class="apidocSignatureSpan"></span>devebot
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function appLoader(params) {
+  params = params || {};
+
+  debuglog.isEnabled &amp;&amp; debuglog(' * devebot is started with parameters: %s', JSON.stringify(params, null, 2));
+
+  var appRootPath = params.appRootPath;
+  var libRootPaths = lodash.map(params.pluginRefs, function(pluginRef) {
+    return path.dirname(pluginRef.path);
+  });
+  var topRootPath = __dirname;
+
+  var appinfo = appinfoLoader(appRootPath, libRootPaths, topRootPath);
+  var appName = params.appName || appinfo.name || 'devebot-application';
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - application name (appName): %s', appName);
+
+  var config = configLoader(appName, appRootPath, libRootPaths.concat(topRootPath));
+
+  var appRef = lodash.isEmpty(appRootPath) ? [] : {
+    name: appName,
+    path: path.join(appRootPath, 'app.js')
+  };
+
+  var devebotRef = {
+    name: 'devebot',
+    path: path.join(topRootPath, 'index.js')
+  };
+
+  config.appName = appName;
+  config.appinfo = appinfo;
+  config.bridgeRefs = lodash.values(params.bridgeRefs);
+  config.pluginRefs = [].concat(appRef, lodash.values(params.pluginRefs), devebotRef);
+
+  return {
+    config: config,
+    server: Server(config)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.bridge_loader" id="apidoc.element.devebot.bridge_loader">
+        function <span class="apidocSignatureSpan">devebot.</span>bridge_loader
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BridgeLoader(params) {
+  debuglog.isEnabled &amp;&amp; debuglog(' + constructor start ...');
+  BridgeLoader.super_.apply(this);
+
+  params = params || {};
+
+  debuglog.isEnabled &amp;&amp; debuglog(' + bridgeLoader start with bridgeRefs: %s', JSON.stringify(params.bridgeRefs));
+
+  this.loadWrappers = function(wrapperMap, wrapperOptions) {
+    wrapperMap = wrapperMap || {};
+    lodash.defaultsDeep(wrapperMap, buildBridgeWrappers(params.bridgeRefs, wrapperOptions));
+    return wrapperMap;
+  };
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - constructor has finished');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.config_loader" id="apidoc.element.devebot.config_loader">
+        function <span class="apidocSignatureSpan">devebot.</span>config_loader
+        <span class="apidocSignatureSpan">(appName, appRootDir, libRootDirs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(appName, appRootDir, libRootDirs) {
+  var label = chores.stringLabelCase(appName);
+  debuglog.isEnabled &amp;&amp; debuglog(' + Config of application (%s) is loaded in context: %s', appName, label);
+
+  var PROFILE_LABEL = util.format('NODE_%s_PROFILE', label);
+  PROFILE_VALUE = process.env[PROFILE_LABEL] || PROFILE_VALUE;
+  if (!process.env[PROFILE_LABEL]) {
+    debuglog.isEnabled &amp;&amp; debuglog(' - %s not found. Use NODE_DEVEBOT_PROFILE instead', PROFILE_LABEL);
+  }
+
+  var SANDBOX_LABEL = util.format('NODE_%s_SANDBOX', label);
+  SANDBOX_VALUE = process.env[SANDBOX_LABEL] || SANDBOX_VALUE;
+  if (!process.env[SANDBOX_LABEL]) {
+    debuglog.isEnabled &amp;&amp; debuglog(' - %s not found. Use NODE_DEVEBOT_SANDBOX instead', SANDBOX_LABEL);
+  }
+
+  debuglog.isEnabled &amp;&amp; debuglog(" - %s's value: %s", PROFILE_LABEL, PROFILE_VALUE);
+  debuglog.isEnabled &amp;&amp; debuglog(" - %s's value: %s", SANDBOX_LABEL, SANDBOX_VALUE);
+
+  var config = init.loadConfig(appRootDir, libRootDirs);
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.launchApplication" id="apidoc.element.devebot.launchApplication">
+        function <span class="apidocSignatureSpan">devebot.</span>launchApplication
+        <span class="apidocSignatureSpan">(context, pluginNames, bridgeNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function launchApplication(context, pluginNames, bridgeNames) {
+  if (lodash.isString(context)) {
+    context = { appRootPath: context };
+  }
+  return appLoader(lodash.assign(context, expandExtensions(lodash.omit(context, ATTRS),
+      pluginNames, bridgeNames)));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.registerLayerware" id="apidoc.element.devebot.registerLayerware">
+        function <span class="apidocSignatureSpan">devebot.</span>registerLayerware
+        <span class="apidocSignatureSpan">(layerRootPath, pluginNames, bridgeNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerLayerware(layerRootPath, pluginNames, bridgeNames) {
+  if ((arguments.length &lt; 3) &amp;&amp; lodash.isArray(layerRootPath)) {
+    bridgeNames = pluginNames;
+    pluginNames = layerRootPath;
+    layerRootPath = null;
+  }
+
+  var initialize = function(layerRootPath, pluginNames, bridgeNames, context) {
+    context = context || {};
+    if (typeof(layerRootPath) == 'string' &amp;&amp; layerRootPath.length &gt; 0) {
+      context.libRootPaths = context.libRootPaths || [];
+      context.libRootPaths.push(layerRootPath);
+    }
+    return expandExtensions(context, pluginNames, bridgeNames);
+  };
+
+  return initialize.bind(undefined, layerRootPath, pluginNames, bridgeNames);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.require" id="apidoc.element.devebot.require">
+        function <span class="apidocSignatureSpan">devebot.</span>require
+        <span class="apidocSignatureSpan">(packageName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">require = function (packageName) {
+  if (builtinPackages.indexOf(packageName) &gt;= 0) return require(packageName);
+  if (packageName == 'debug') return debug;
+  if (packageName == 'chores') return require('./lib/utils/chores.js');
+  if (packageName == 'loader') return require('./lib/utils/loader.js');
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager" id="apidoc.element.devebot.runhook_manager">
+        function <span class="apidocSignatureSpan">devebot.</span>runhook_manager
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runhook_manager = function (params) {
+  debuglog.isEnabled &amp;&amp; debuglog(' + constructor start ...');
+
+  params = params || {};
+
+  var self = this;
+
+  self.logger = params.loggingFactory.getLogger();
+
+  self.runhookInstance = {
+    sandboxName: params.sandboxName,
+    sandboxConfig: params.sandboxConfig,
+    service: {
+      loggingFactory: params.loggingFactory
+    }
+  };
+
+  lodash.forEach(params.injectedServices, function(serviceName) {
+    self.runhookInstance.service[serviceName] = params[serviceName];
+  });
+
+  self.getSandboxName = function() {
+    return params.sandboxName;
+  };
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - create a runhook-manager instance in &lt;%s&gt;', self.getSandboxName());
+
+  var runhookRoot = {};
+
+  self.getRunhooks = function() {
+    return (runhookRoot[constx.RUNHOOK.ROOT_KEY] || {});
+  };
+
+  self.isContextPassedAtLoading = function() {
+    return lodash.get(params, ['generalConfig', constx.RUNHOOK.ROOT_KEY, 'context_passed_at_loading']) == true;
+  };
+
+  self.isRunhookPathAsc = function() {
+    return true;
+  };
+
+  params.pluginLoader.loadRunhooks(runhookRoot, self.isContextPassedAtLoading() ? self.runhookInstance : {});
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - constructor has finished');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.devebot.bridge_loader" id="apidoc.module.devebot.bridge_loader">module devebot.bridge_loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.bridge_loader.bridge_loader" id="apidoc.element.devebot.bridge_loader.bridge_loader">
+        function <span class="apidocSignatureSpan">devebot.</span>bridge_loader
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BridgeLoader(params) {
+  debuglog.isEnabled &amp;&amp; debuglog(' + constructor start ...');
+  BridgeLoader.super_.apply(this);
+
+  params = params || {};
+
+  debuglog.isEnabled &amp;&amp; debuglog(' + bridgeLoader start with bridgeRefs: %s', JSON.stringify(params.bridgeRefs));
+
+  this.loadWrappers = function(wrapperMap, wrapperOptions) {
+    wrapperMap = wrapperMap || {};
+    lodash.defaultsDeep(wrapperMap, buildBridgeWrappers(params.bridgeRefs, wrapperOptions));
+    return wrapperMap;
+  };
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - constructor has finished');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.bridge_loader.super_" id="apidoc.element.devebot.bridge_loader.super_">
+        function <span class="apidocSignatureSpan">devebot.bridge_loader.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.devebot.chores" id="apidoc.module.devebot.chores">module devebot.chores</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.chores.filterFiles" id="apidoc.element.devebot.chores.filterFiles">
+        function <span class="apidocSignatureSpan">devebot.chores.</span>filterFiles
+        <span class="apidocSignatureSpan">(dir, filter, filenames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filterFiles = function (dir, filter, filenames) {
+  filenames = filenames || [];
+  var regex = (filter) ? new RegExp(filter) : null;
+  var files;
+  try {
+    files = fs.readdirSync(dir);
+  } catch (err) {
+    files = [];
+  }
+  for (var i in files) {
+    if ((regex) ? regex.test(files[i]) : true) {
+      var name = dir + '/' + files[i];
+      if (fs.statSync(name).isFile()) {
+        filenames.push(files[i]);
+      }
+    }
+  }
+  return filenames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+init.loadConfig = function(appRootDir, libRootDirs) {
+libRootDirs = libRootDirs || [];
+
+var config = {};
+var configDir = path.join(appRootDir, '/config');
+
+var contextFiles = chores.<span class="apidocCodeKeywordSpan">filterFiles</span>(configDir, '.*\.js');
+var contextArray = lodash.map(contextFiles, function(file) {
+  return file.replace('.js', '').split(/[_]/);
+});
+
+var includedNames = {};
+configNames.forEach(function(configName) {
+  includedNames[configName] = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.chores.listFiles" id="apidoc.element.devebot.chores.listFiles">
+        function <span class="apidocSignatureSpan">devebot.chores.</span>listFiles
+        <span class="apidocSignatureSpan">(dir, filenames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listFiles = function (dir, filenames) {
+  return chores.filterFiles(dir, filenames, '.*');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.chores.loadServiceByNames" id="apidoc.element.devebot.chores.loadServiceByNames">
+        function <span class="apidocSignatureSpan">devebot.chores.</span>loadServiceByNames
+        <span class="apidocSignatureSpan">(serviceMap, serviceFolder, serviceNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadServiceByNames = function (serviceMap, serviceFolder, serviceNames) {
+  var self = this;
+
+  if (debuglog.isEnabled) {
+    debuglog(' - load services by names: %s', JSON.stringify(serviceNames));
+  }
+
+  serviceNames = (lodash.isArray(serviceNames)) ? serviceNames : [serviceNames];
+
+  serviceNames.forEach(function(serviceName) {
+    var filepath = path.join(serviceFolder, serviceName + '.js');
+    var serviceConstructor = loader(filepath);
+    if (lodash.isFunction(serviceConstructor)) {
+      var serviceEntry = {};
+      var entryPath = serviceName.replace(/-([a-z])/g, function (m, w) {
+        return w.toUpperCase();
+      });
+      serviceEntry[entryPath] = serviceConstructor;
+      lodash.defaults(serviceMap, serviceEntry);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var self = this;
+
+var managerMap = {};
+var serviceMap = {};
+var triggerMap = {};
+
+chores.<span class="apidocCodeKeywordSpan">loadServiceByNames</span>(managerMap, __dirname, defaultServiceNames);
+
+params.pluginLoader.loadServices(serviceMap);
+params.pluginLoader.loadTriggers(triggerMap);
+
+var managerNames = lodash.keys(managerMap);
+serviceMap = lodash.omit(serviceMap, managerNames);
+triggerMap = lodash.omit(triggerMap, managerNames);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.chores.pickProperty" id="apidoc.element.devebot.chores.pickProperty">
+        function <span class="apidocSignatureSpan">devebot.chores.</span>pickProperty
+        <span class="apidocSignatureSpan">(propName, containers, propDefault)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pickProperty = function (propName, containers, propDefault) {
+  if (!lodash.isString(propName) || !lodash.isArray(containers)) return null;
+  for(var i=0; i&lt;containers.length; i++) {
+    if (lodash.isObject(containers[i]) &amp;&amp; containers[i][propName]) {
+      return containers[i][propName];
+    }
+  }
+  return propDefault;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	description: 'Display application information',
+  options: []
+},
+handler: function(params, ctx) {
+  return Promise.resolve([{
+      type: 'json',
+      title: 'Application Information',
+      data: chores.<span class="apidocCodeKeywordSpan">pickProperty</span>('appinfo', [ctx, this, commandConfig], {})
+  }]);
+}
+};
+
+module.exports = function(params) {
+commandConfig = params || {};
+return commandObject;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.chores.stringKebabCase" id="apidoc.element.devebot.chores.stringKebabCase">
+        function <span class="apidocSignatureSpan">devebot.chores.</span>stringKebabCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function kebabCase(str) {
+  return (str || '').toLowerCase().replace(' ', '-');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// lookup service instances
+var commandController = injektor.lookup('commandController');
+var securityManager = injektor.lookup('securityManager');
+
+// application root url
+var appName = params.appName || 'devebot';
+var appRootUrl = '/' + chores.<span class="apidocCodeKeywordSpan">stringKebabCase</span>(appName);
+
+// devebot configures
+var devebotCfg = lodash.get(params, ['profile', 'context', 'devebot'], {});
+
+var tunnelCfg = lodash.get(devebotCfg, ['tunnel'], {});
+var sslEnabled = tunnelCfg.enabled &amp;&amp; tunnelCfg.key_file &amp;&amp; tunnelCfg.crt_file;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.chores.stringLabelCase" id="apidoc.element.devebot.chores.stringLabelCase">
+        function <span class="apidocSignatureSpan">devebot.chores.</span>stringLabelCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function labelCase(str) {
+  return (str || '').toUpperCase().replace('-', '_');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var constx = require('../utils/constx.js');
+var loader = require('../utils/loader.js');
+var debuglog = require('../utils/debug.js')('devebot:configLoader');
+
+var configNames = ['general', 'profile', 'sandbox'];
+
+function init(appName, appRootDir, libRootDirs) {
+var label = chores.<span class="apidocCodeKeywordSpan">stringLabelCase</span>(appName);
+debuglog.isEnabled &amp;&amp; debuglog(' + Config of application (%s) is loaded in context: %s', appName, label);
+
+var PROFILE_LABEL = util.format('NODE_%s_PROFILE', label);
+PROFILE_VALUE = process.env[PROFILE_LABEL] || PROFILE_VALUE;
+if (!process.env[PROFILE_LABEL]) {
+  debuglog.isEnabled &amp;&amp; debuglog(' - %s not found. Use NODE_DEVEBOT_PROFILE instead', PROFILE_LABEL);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.devebot.config_loader" id="apidoc.module.devebot.config_loader">module devebot.config_loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.config_loader.config_loader" id="apidoc.element.devebot.config_loader.config_loader">
+        function <span class="apidocSignatureSpan">devebot.</span>config_loader
+        <span class="apidocSignatureSpan">(appName, appRootDir, libRootDirs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(appName, appRootDir, libRootDirs) {
+  var label = chores.stringLabelCase(appName);
+  debuglog.isEnabled &amp;&amp; debuglog(' + Config of application (%s) is loaded in context: %s', appName, label);
+
+  var PROFILE_LABEL = util.format('NODE_%s_PROFILE', label);
+  PROFILE_VALUE = process.env[PROFILE_LABEL] || PROFILE_VALUE;
+  if (!process.env[PROFILE_LABEL]) {
+    debuglog.isEnabled &amp;&amp; debuglog(' - %s not found. Use NODE_DEVEBOT_PROFILE instead', PROFILE_LABEL);
+  }
+
+  var SANDBOX_LABEL = util.format('NODE_%s_SANDBOX', label);
+  SANDBOX_VALUE = process.env[SANDBOX_LABEL] || SANDBOX_VALUE;
+  if (!process.env[SANDBOX_LABEL]) {
+    debuglog.isEnabled &amp;&amp; debuglog(' - %s not found. Use NODE_DEVEBOT_SANDBOX instead', SANDBOX_LABEL);
+  }
+
+  debuglog.isEnabled &amp;&amp; debuglog(" - %s's value: %s", PROFILE_LABEL, PROFILE_VALUE);
+  debuglog.isEnabled &amp;&amp; debuglog(" - %s's value: %s", SANDBOX_LABEL, SANDBOX_VALUE);
+
+  var config = init.loadConfig(appRootDir, libRootDirs);
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.config_loader.loadConfig" id="apidoc.element.devebot.config_loader.loadConfig">
+        function <span class="apidocSignatureSpan">devebot.config_loader.</span>loadConfig
+        <span class="apidocSignatureSpan">(appRootDir, libRootDirs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadConfig = function (appRootDir, libRootDirs) {
+  libRootDirs = libRootDirs || [];
+
+  var config = {};
+  var configDir = path.join(appRootDir, '/config');
+
+  var contextFiles = chores.filterFiles(configDir, '.*\.js');
+  var contextArray = lodash.map(contextFiles, function(file) {
+    return file.replace('.js', '').split(/[_]/);
+  });
+
+  var includedNames = {};
+  configNames.forEach(function(configName) {
+    includedNames[configName] = [];
+  });
+
+  if (lodash.isString(PROFILE_VALUE) &amp;&amp; PROFILE_VALUE.length &gt; 0) {
+    includedNames['profile'].push(PROFILE_VALUE);
+  }
+
+  if (lodash.isString(SANDBOX_VALUE) &amp;&amp; SANDBOX_VALUE.length &gt; 0) {
+    includedNames['sandbox'] = SANDBOX_VALUE.split(',');
+  }
+
+  configNames.forEach(function(configName) {
+    config[configName] = {};
+
+    var defaultFile = path.join(configDir, configName + '.js');
+
+    if (debuglog.isEnabled) debuglog(' + load the default config: %s', defaultFile);
+    config[configName]['default'] = loader(defaultFile);
+
+    libRootDirs.forEach(function(libRootDir) {
+      defaultFile = path.join(libRootDir, '/config', configName + '.js');
+      config[configName]['default'] = lodash.defaultsDeep(config[configName]['default'], loader(defaultFile));
+    });
+
+    if (debuglog.isEnabled) debuglog(' + load the custom config of %s', configName);
+    config[configName]['context'] = {};
+
+    var contextNames = lodash.filter(contextArray, function(item) {
+      var found = (item.length == 2) &amp;&amp; (item[0] == configName) &amp;&amp; (item[1].length &gt; 0);
+
+      if (constx.CONFIG.MUST_SPECIFY_IN_ENV || (includedNames[configName].length &gt; 0)) {
+        found = found &amp;&amp; (lodash.indexOf(includedNames[configName], item[1]) &gt;= 0);
+      }
+
+      return found;
+    });
+
+    lodash.forEach(contextNames, function(contextItem) {
+      var contextFile = path.join(configDir, contextItem.join('_') + '.js');
+      if (debuglog.isEnabled) debuglog(' - load the environment config: %s', contextFile);
+      var contextCfg = lodash.defaultsDeep(loader(contextFile), config[configName]['default']);
+      if ((includedNames[configName].length &gt; 0) || !(contextCfg.disabled)) {
+        var contextName = contextItem[1];
+        config[configName]['context'][contextName] = contextCfg;
+      }
+    });
+
+    if (configName == 'profile') {
+      var profileList = lodash.values(config[configName]['context']);
+      if (profileList.length &gt; 0) {
+        config[configName]['context'] = profileList[0];
+      } else {
+        config[configName]['context'] = config[configName]['default'];
+      }
+    }
+
+    if (configName == 'sandbox') {
+      if (lodash.isEmpty(config[configName]['context'])) {
+        config[configName]['context']['default'] = config[configName]['default'];
+      }
+    }
+
+    debuglog.isEnabled &amp;&amp; debuglog(' - environment config object: %s', util.inspect(config[configName], {depth: 2}));
+  });
+
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!process.env[SANDBOX_LABEL]) {
+  debuglog.isEnabled &amp;&amp; debuglog(' - %s not found. Use NODE_DEVEBOT_SANDBOX instead', SANDBOX_LABEL);
+}
+
+debuglog.isEnabled &amp;&amp; debuglog(" - %s's value: %s", PROFILE_LABEL, PROFILE_VALUE);
+debuglog.isEnabled &amp;&amp; debuglog(" - %s's value: %s", SANDBOX_LABEL, SANDBOX_VALUE);
+
+var config = init.<span class="apidocCodeKeywordSpan">loadConfig</span>(appRootDir, libRootDirs);
+return config;
+}
+
+init.loadConfig = function(appRootDir, libRootDirs) {
+libRootDirs = libRootDirs || [];
+
+var config = {};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.devebot.runhook_manager" id="apidoc.module.devebot.runhook_manager">module devebot.runhook_manager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager.runhook_manager" id="apidoc.element.devebot.runhook_manager.runhook_manager">
+        function <span class="apidocSignatureSpan">devebot.</span>runhook_manager
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runhook_manager = function (params) {
+  debuglog.isEnabled &amp;&amp; debuglog(' + constructor start ...');
+
+  params = params || {};
+
+  var self = this;
+
+  self.logger = params.loggingFactory.getLogger();
+
+  self.runhookInstance = {
+    sandboxName: params.sandboxName,
+    sandboxConfig: params.sandboxConfig,
+    service: {
+      loggingFactory: params.loggingFactory
+    }
+  };
+
+  lodash.forEach(params.injectedServices, function(serviceName) {
+    self.runhookInstance.service[serviceName] = params[serviceName];
+  });
+
+  self.getSandboxName = function() {
+    return params.sandboxName;
+  };
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - create a runhook-manager instance in &lt;%s&gt;', self.getSandboxName());
+
+  var runhookRoot = {};
+
+  self.getRunhooks = function() {
+    return (runhookRoot[constx.RUNHOOK.ROOT_KEY] || {});
+  };
+
+  self.isContextPassedAtLoading = function() {
+    return lodash.get(params, ['generalConfig', constx.RUNHOOK.ROOT_KEY, 'context_passed_at_loading']) == true;
+  };
+
+  self.isRunhookPathAsc = function() {
+    return true;
+  };
+
+  params.pluginLoader.loadRunhooks(runhookRoot, self.isContextPassedAtLoading() ? self.runhookInstance : {});
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - constructor has finished');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.devebot.runhook_manager.prototype" id="apidoc.module.devebot.runhook_manager.prototype">module devebot.runhook_manager.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager.prototype.callRunhook" id="apidoc.element.devebot.runhook_manager.prototype.callRunhook">
+        function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>callRunhook
+        <span class="apidocSignatureSpan">(routine, entity, operation, document)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callRunhook = function (routine, entity, operation, document) {
+  var self = this;
+  var runhooks = self.getRunhooks();
+  self.logger.debug('&lt;%s&gt; * callRunhook("%s", "%s", "%s")', self.getSandboxName(), routine, entity, operation);
+  if (self.isRunhookAvailable(routine, entity, operation)) {
+    var runhookOp = self.isRunhookPathAsc() ? runhooks[routine][entity][operation] : runhooks[entity][routine][operation];
+    return Promise.resolve(self.isContextPassedAtLoading() ? runhookOp(document) : runhookOp.call(self.runhookInstance, document
+));
+  } else {
+    return Promise.reject({ name: 'runhook_is_not_available', routine: routine, entity: entity, operation: operation});
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var operation = job.data.operation;
+var opTimestamp = job.data.optimestamp;
+var doc = job.data.document;
+
+if (runhookManager.isRunhookAvailable(routine, entity, operation)) {
+  self.logger.trace(constx.RUNHOOK.MSG.BEGIN, self.getSandboxName(), routine, operation, opTimestamp, entity);
+  self.logger.debug(constx.RUNHOOK.MSG.DATA, self.getSandboxName(), routine, operation, opTimestamp, entity, JSON.stringify(doc));
+  runhookManager.<span class="apidocCodeKeywordSpan">callRunhook</span>(routine, entity, operation, doc).then(function(result) {
+    self.logger.trace(constx.RUNHOOK.MSG.RESULT, self.getSandboxName(), routine, operation, opTimestamp, entity, JSON.stringify(
+result));
+    done &amp;&amp; done(null, result);
+  }).catch(function(error) {
+    self.logger.error(constx.RUNHOOK.MSG.ERROR, self.getSandboxName(), routine, operation, opTimestamp, entity, JSON.stringify(doc
+), JSON.stringify(error));
+    done &amp;&amp; done(error, null);
+  }).finally(function() {
+    self.logger.debug(constx.RUNHOOK.MSG.END, self.getSandboxName(), routine, operation, opTimestamp, entity);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager.prototype.getRunhookEntities" id="apidoc.element.devebot.runhook_manager.prototype.getRunhookEntities">
+        function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getRunhookEntities
+        <span class="apidocSignatureSpan">(routine)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRunhookEntities = function (routine) {
+  var self = this;
+  var runhooks = self.getRunhooks();
+
+  var modelsByRoutine = [];
+  if (self.isRunhookPathAsc()) {
+    if (lodash.isObject(runhooks[routine])) {
+      modelsByRoutine = lodash.keys(runhooks[routine]);
+    }
+  } else {
+    var models = lodash.keys(runhooks) || [];
+    for(var i=0; i&lt;models.length; i++) {
+      if (lodash.isObject(runhooks[models[i]]) &amp;&amp;
+          lodash.isObject(runhooks[models[i]][routine])) {
+        modelsByRoutine.push(models[i]);
+      }
+    }
+  }
+  return modelsByRoutine;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    job.removeOnComplete(true).save();
+  };
+  return Promise.promisify(promisee)();
+};
+
+self.getRunhookEntities = function(routine) {
+  return params.runhookManager.<span class="apidocCodeKeywordSpan">getRunhookEntities</span>(routine);
+};
+
+self.getRunhookOperations = function(routine, entity) {
+  return params.runhookManager.getRunhookOperations(routine, entity);
+};
+
+debuglog.isEnabled &amp;&amp; debuglog(' - jobqueueMaster instance in sandbox &lt;%s&gt; has been created', self
+.getSandboxName());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager.prototype.getRunhookOperations" id="apidoc.element.devebot.runhook_manager.prototype.getRunhookOperations">
+        function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getRunhookOperations
+        <span class="apidocSignatureSpan">(routine, entity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRunhookOperations = function (routine, entity) {
+  var self = this;
+  var runhooks = self.getRunhooks();
+  if (self.isRunhookPathAsc()) {
+    if (lodash.isObject(runhooks[routine]) &amp;&amp;
+        lodash.isObject(runhooks[routine][entity])) {
+      return lodash.keys(runhooks[routine][entity]);
+    }
+  } else {
+    if (lodash.isObject(runhooks[entity]) &amp;&amp;
+        lodash.isObject(runhooks[entity][routine])) {
+      return lodash.keys(runhooks[entity][routine]);
+    }
+  }
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+
+  self.getRunhookEntities = function(routine) {
+    return params.runhookManager.getRunhookEntities(routine);
+  };
+
+  self.getRunhookOperations = function(routine, entity) {
+    return params.runhookManager.<span class="apidocCodeKeywordSpan">getRunhookOperations</span>(routine, entity);
+  };
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - jobqueueMaster instance in sandbox &lt;%s&gt; has been created', self
+.getSandboxName());
+
+  debuglog.isEnabled &amp;&amp; debuglog(' - constructor has finished');
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager.prototype.getServiceHelp" id="apidoc.element.devebot.runhook_manager.prototype.getServiceHelp">
+        function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getServiceHelp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getServiceHelp = function () {
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+debuglog.isEnabled &amp;&amp; debuglog(' - merging serviceHelps has done!');
+};
+
+var pickSandboxServiceHelp = function(serviceName, blocks) {
+var self = this;
+var serviceObject = self.getSandboxService(serviceName);
+if (lodash.isObject(serviceObject) &amp;&amp; lodash.isFunction(serviceObject.getServiceHelp)) {
+  var serviceHelp = serviceObject.<span class="apidocCodeKeywordSpan">getServiceHelp</span>();
+  if (lodash.isObject(serviceHelp) &amp;&amp; !lodash.isArray(serviceHelp)) {
+    serviceHelp = [serviceHelp];
+  }
+  if (lodash.isArray(serviceHelp)) {
+    lodash.forEach(serviceHelp, function(serviceInfo) {
+      if (lodash.isString(serviceInfo.title)) {
+        serviceInfo.title = serviceName + ' - ' + serviceInfo.title;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager.prototype.getServiceInfo" id="apidoc.element.devebot.runhook_manager.prototype.getServiceInfo">
+        function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>getServiceInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getServiceInfo = function () {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.devebot.runhook_manager.prototype.isRunhookAvailable" id="apidoc.element.devebot.runhook_manager.prototype.isRunhookAvailable">
+        function <span class="apidocSignatureSpan">devebot.runhook_manager.prototype.</span>isRunhookAvailable
+        <span class="apidocSignatureSpan">(routine, entity, operation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRunhookAvailable = function (routine, entity, operation) {
+  var self = this;
+  var runhooks = self.getRunhooks();
+  if (self.isRunhookPathAsc()) {
+    return (lodash.isObject(runhooks[routine]) &amp;&amp;
+        lodash.isObject(runhooks[routine][entity]) &amp;&amp;
+        lodash.isFunction(runhooks[routine][entity][operation]));
+  } else {
+    return (lodash.isObject(runhooks[entity]) &amp;&amp;
+        lodash.isObject(runhooks[entity][routine]) &amp;&amp;
+        lodash.isFunction(runhooks[entity][routine][operation]));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var jobQueueProcess = function (job, done) {
+var routine = job.data.routine;
+var entity = job.data.entity;
+var operation = job.data.operation;
+var opTimestamp = job.data.optimestamp;
+var doc = job.data.document;
+
+if (runhookManager.<span class="apidocCodeKeywordSpan">isRunhookAvailable</span>(routine, entity, operation)) {
+  self.logger.trace(constx.RUNHOOK.MSG.BEGIN, self.getSandboxName(), routine, operation, opTimestamp, entity);
+  self.logger.debug(constx.RUNHOOK.MSG.DATA, self.getSandboxName(), routine, operation, opTimestamp, entity, JSON.stringify(doc));
+  runhookManager.callRunhook(routine, entity, operation, doc).then(function(result) {
+    self.logger.trace(constx.RUNHOOK.MSG.RESULT, self.getSandboxName(), routine, operation, opTimestamp, entity, JSON.stringify(
+result));
+    done &amp;&amp; done(null, result);
+  }).catch(function(error) {
+    self.logger.error(constx.RUNHOOK.MSG.ERROR, self.getSandboxName(), routine, operation, opTimestamp, entity, JSON.stringify(doc
+), JSON.stringify(error));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
